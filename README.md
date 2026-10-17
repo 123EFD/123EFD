@@ -1,16 +1,34 @@
-## Hi there 👋
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="180" viewBox="0 0 800 180">
+  <style>
+    .bg   { fill: #121212; }
+    text  { font-family: 'DM Mono', ui-monospace, Menlo, Consolas, monospace; letter-spacing: -0.05em; }
+    .name { fill: #e8e8e8; font-size: 30px; }
+    .sub  { fill: #9a9a9a; font-size: 14px; }
+    .tag  { fill: #c58fd6; font-size: 14px; }
+    .line { stroke: #3a3a3a; stroke-width: 2; }
 
-<!--
-**123EFD/123EFD** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+    /* walk cycle: slide the 4-frame strip left in 4 steps */
+    .sprite { image-rendering: pixelated; animation: walk 0.6s steps(4) infinite; }
+    @keyframes walk { to { transform: translateX(-192px); } }
 
-Here are some ideas to get you started:
+    /* patrol across the banner */
+    .patrol { animation: patrol 12s linear infinite alternate; }
+    @keyframes patrol { from { transform: translateX(10px); } to { transform: translateX(742px); } }
+  </style>
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+  <rect class="bg" width="800" height="180"/>
+  <rect class="line" x="1" y="1" width="798" height="178" fill="none"/>
+
+  <text class="tag"  x="24" y="34">~/profile</text>
+  <text class="name" x="24" y="76">123EFD</text>
+  <text class="sub"  x="24" y="102">student · developer · foodie</text>
+
+  <line class="line" x1="0" y1="132" x2="800" y2="132"/>
+
+  <g class="patrol">
+    <!-- nested svg clips to one 48x48 frame -->
+    <svg x="0" y="86" width="48" height="48" overflow="hidden">
+      <image class="sprite" width="192" height="48", href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAAYCAYAAABKtPtEAAADYElEQVR4AczWPYxMURjG8Uu7GtGoVBJaOomoRavTiIJOJCoK0dJoNEKhkOhEJ0oRiUZoSVQqhUS1Wvwmnpv3nr13dubuEOLvnPf7Pc+sye7v/sGfra2tn/9gzKwRKwmwlweo/fLpQ+ecteFfLtpVAItv8gH6hVXfJn/V3HXzdhWgbWiZ0MZaWx7xjhw7MQjxQXwQGDHk1Fx2GEkfdckfDfx2LhVAoeHrPEANfvfu/+rBqP5vr99xzUI/1H5TjeTUXHZQs0OAGpQADZxiTow9QPzjndMd3OVFvPQQi098GXqoG8sfm7+sV43pCf0HAnBYEO6KMlwBWyw+dpAvdvDUhQ7uaiAfchM7efkycwf6oAb0YMe/6uPlq81sPUJ69AJItrQF4a4YGkBxYlMP+P72qbQFP55fXZx6gCF+/Mab7v2jR8wB2cFsd8HMTb3Y1Gz56uAeUht/Hi/eC8CABZ1Y5wHb29v7PExd20MfWF7OsscTGHItDiJA78TGRPBAdXCXnzp92GK1thdgrw/QHPdefHbMphVPI8vDXXxMRA/2OALBXQ2IAPWJRYReAEHs9QF6zGFTHwCBMt9PnTsR4C5eBdwhgKRN8OPQxQ61V2vXWO5zP4C5Ak4KYFlkMWdr8/1vrCvgpAB7fdiDJ7c61D6x7z971qHG2juxUf2tXWNz75MCWBa1cWzLo8ba+/VzRztUf+zHL192qLF17mZjWQ2xUHNaW2xSAMtCUohtecTv9C3sfPj6a+dLpsJfuXLm8OK3xepr78RG9cc2GzW26l0e8eDeC7CJB/imDZfOnu1gyN1XB7rAjki+uNho58sBIcWRD2CTAvYCGJDlnZYHf5Z3srNYfQA//JaFq+fPMxe4h4Vj4h9zg9kYSx2bP1fAgQCGWR4WZsM9sKe4fe3mVGjgJxwGzj+G2TDvj6v/6ckHEH97Rjwn8dDmsKuAAwHmPiDqaz6G37rg/52lpvKn5hMj6E88uLcQD/ITI1yIL+dAgDjbM8t7QBtrbTkhMcvCFxfizzklSOKrnnME3CFAlnfWwRaHh1R/vYu31LjaUP31bm6If50PIDWrngMB2uXZGmVpJ7uFfxlt/pRtXkty+XNfdkY8Z/IIGOLL2QuwiQek6brnstmJ6bmbCOIt6pA+Tnb4BQAA//9afy1wAAAABklEQVQDAH1cQL6WMRV1AAAAAElFTkSuQmCC"/>
+    </svg>
+  </g>
+</svg>
