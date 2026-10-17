@@ -1,7 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="180" viewBox="0 0 800 180">
-  <div align="center">
-    <img src="./assets/banner.svg" alt="123EFD banner" width="100%">
-  </div>
   <style>
     .bg   { fill: #121212; }
     text  { font-family: 'DM Mono', ui-monospace, Menlo, Consolas, monospace; letter-spacing: -0.05em; }
@@ -21,6 +18,9 @@
     @keyframes patrol { from { transform: translateX(340px); } to { transform: translateX(758px); } }
   </style>
 
+  <div align="center">
+    <img src="./assets/banner.svg" alt="123EFD banner" width="100%">
+  </div>
   <rect class="bg" width="800" height="180"/>
   <rect class="line" x="1" y="1" width="798" height="178" fill="none"/>
 
